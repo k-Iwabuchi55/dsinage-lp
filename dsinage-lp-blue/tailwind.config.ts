@@ -31,6 +31,9 @@ const config: Config = {
         'fade-in': 'fadeIn 1s ease-in',
         'slide-up': 'slideUp 0.8s ease-out',
         'float': 'float 3s ease-in-out infinite',
+        'rotate-3d': 'rotate3d 20s linear infinite',
+        'rotate-3d-slow': 'rotate3d 30s linear infinite',
+        'fadeIn': 'fadeInUp 0.5s ease-out',
       },
       keyframes: {
         fadeIn: {
@@ -44,6 +47,14 @@ const config: Config = {
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
+        },
+        rotate3d: {
+          '0%': { transform: 'perspective(1000px) rotateY(0deg)' },
+          '100%': { transform: 'perspective(1000px) rotateY(360deg)' },
+        },
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px) scale(0.95)' },
+          '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
         },
       },
     },

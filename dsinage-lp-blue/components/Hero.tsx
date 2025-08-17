@@ -5,6 +5,16 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-brand-dark via-brand-dark/95 to-brand-dark"></div>
       
+      {/* Background image with 3D rotation */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <img 
+          src="/sozai.png" 
+          alt="" 
+          className="opacity-70 md:opacity-70 object-contain h-[80vh] md:h-[70vh] animate-rotate-3d-slow"
+          style={{ transformStyle: 'preserve-3d' }}
+        />
+      </div>
+      
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px]">
           <div className="absolute inset-0 bg-gradient-radial from-brand-blue/5 via-transparent to-transparent animate-pulse"></div>
