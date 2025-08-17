@@ -125,7 +125,7 @@ export default function ContactSection() {
 
       <footer className="mt-20 py-8 border-t border-white/10">
         <div className="section-padding text-center">
-          <p className="text-white/40">© 2024 D-signage. All rights reserved.</p>
+          <p className="text-white/40">© 2025 D-signage. All rights reserved.</p>
         </div>
       </footer>
     </section>

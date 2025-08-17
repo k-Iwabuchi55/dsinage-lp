@@ -1,11 +1,29 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
 export default function PricingPlans() {
   const { ref, isVisible } = useScrollAnimation()
   const [planType, setPlanType] = useState<'rental' | 'purchase'>('rental')
+  const [isSticky, setIsSticky] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const pricingSection = document.getElementById('pricing')
+      if (pricingSection) {
+        const rect = pricingSection.getBoundingClientRect()
+        const sectionTop = rect.top
+        const sectionBottom = rect.bottom
+        
+        // セクションが画面内にあり、かつセクションの上部が画面上部より上にある場合
+        setIsSticky(sectionTop < 100 && sectionBottom > 200)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const rentalPlans = [
     {
@@ -118,8 +136,39 @@ export default function PricingPlans() {
           </p>
           <div className="h-[1px] w-32 bg-gradient-to-r from-transparent via-brand-light-blue to-transparent mx-auto mt-6"></div>
 
-          {/* プラン切り替えボタン */}
-          <div className="mt-10 inline-flex bg-white/5 backdrop-blur-sm rounded-full p-1 border border-brand-light-blue/20">
+        </div>
+
+        {/* プラン切り替えボタン - 通常表示 */}
+        <div className={`text-center mb-10 ${isSticky ? 'invisible' : 'visible'}`}>
+          <div className="inline-flex bg-white/5 backdrop-blur-sm rounded-full p-1 border border-brand-light-blue/20">
+            <button
+              onClick={() => setPlanType('rental')}
+              className={`px-8 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
+                planType === 'rental'
+                  ? 'bg-gradient-blue text-white shadow-lg'
+                  : 'text-white/60 hover:text-white'
+              }`}
+            >
+              レンタルプラン
+            </button>
+            <button
+              onClick={() => setPlanType('purchase')}
+              className={`px-8 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
+                planType === 'purchase'
+                  ? 'bg-gradient-blue text-white shadow-lg'
+                  : 'text-white/60 hover:text-white'
+              }`}
+            >
+              ご購入プラン
+            </button>
+          </div>
+        </div>
+
+        {/* プラン切り替えボタン - スティッキー表示 */}
+        <div className={`fixed top-20 left-0 right-0 z-40 text-center transition-all duration-300 ${
+          isSticky ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'
+        }`}>
+          <div className="inline-flex bg-brand-dark/90 backdrop-blur-lg rounded-full p-1 border border-brand-light-blue/30 shadow-lg">
             <button
               onClick={() => setPlanType('rental')}
               className={`px-8 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
