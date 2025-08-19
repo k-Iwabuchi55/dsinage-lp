@@ -32,7 +32,7 @@ export default function Home() {
       <BenefitsSection />
       <UseCases />
       {/* <WhyChooseUs /> */}
-      {/* <ProductShowcase /> */}
+      <ProductShowcase />
       <PricingPlans />
       <WorkflowSection />
       <CoverageMap />
