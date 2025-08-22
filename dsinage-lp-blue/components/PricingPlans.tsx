@@ -17,7 +17,7 @@ export default function PricingPlans() {
         const sectionBottom = rect.bottom
         
         // セクションが画面内にあり、かつセクションの上部が画面上部より上にある場合
-        setIsSticky(sectionTop < 100 && sectionBottom > 200)
+        setIsSticky(sectionTop < -300 && sectionBottom > 200)
       }
     }
 
@@ -165,7 +165,7 @@ export default function PricingPlans() {
         </div>
 
         {/* プラン切り替えボタン - スティッキー表示 */}
-        <div className={`fixed top-20 left-0 right-0 z-40 text-center transition-all duration-300 ${
+        <div className={`fixed top-16 left-0 right-0 z-40 text-center duration-300 ${
           isSticky ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'
         }`}>
           <div className="inline-flex bg-brand-dark/90 backdrop-blur-lg rounded-full p-1 border border-brand-light-blue/30 shadow-lg">

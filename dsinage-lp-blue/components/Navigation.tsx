@@ -19,7 +19,7 @@ export default function Navigation({ scrolled }: NavigationProps) {
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-brand-dark/90 backdrop-blur-md py-2' : 'bg-transparent py-4'
+      scrolled ? 'bg-brand-dark/90 backdrop-blur-md py-2 pb-0 md:pb-2' : 'bg-transparent py-4 pb-0 md:pb-4'
     }`}>
       <div className="section-padding">
         <div className="flex items-center justify-between">

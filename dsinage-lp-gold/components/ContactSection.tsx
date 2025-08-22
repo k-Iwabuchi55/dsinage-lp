@@ -41,7 +41,7 @@ export default function ContactSection() {
           <form onSubmit={handleSubmit} className="glass-effect rounded-2xl p-8">
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div>
-                <label htmlFor="company" className="block text-white/80 mb-2">会社名</label>
+                <label htmlFor="company" className="block text-white/80 mb-2">会社・店舗名 *</label>
                 <input
                   type="text"
                   id="company"
@@ -82,7 +82,7 @@ export default function ContactSection() {
                 />
               </div>
               <div>
-                <label htmlFor="phone" className="block text-white/80 mb-2">電話番号</label>
+                <label htmlFor="phone" className="block text-white/80 mb-2">電話番号 *</label>
                 <input
                   type="tel"
                   id="phone"
