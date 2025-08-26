@@ -18,6 +18,7 @@ const config: Config = {
         "brand-cyan": "#00d4ff",
         "brand-dark": "#1a1a1a",
         "brand-gray": "#2A2A2A",
+        "brand-gold": "#D9AE0A",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -40,6 +41,7 @@ const config: Config = {
         // NEW: 3回転して奥に移動するアニメーション (元に戻す場合はこの行を削除)
         "spin-and-shrink": "spinAndShrink 4s ease-in-out forwards",
         "text-appear": "textAppear 1.5s ease-out 3s forwards",
+        wave: "wave 3s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: {
@@ -92,6 +94,11 @@ const config: Config = {
             transform: "translateY(0)",
             filter: "blur(0)",
           },
+        },
+        wave: {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
         },
       },
     },

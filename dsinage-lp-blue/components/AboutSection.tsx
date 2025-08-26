@@ -65,7 +65,9 @@ export default function AboutSection() {
           </div>
 
           {/* テキストアニメーション */}
-          <div className={`relative z-10 grid md:grid-cols-2 gap-12 items-center ${isVisible ? 'animate-text-appear' : 'opacity-0'}`}>
+          <div className={`relative z-10 grid md:grid-cols-2 gap-12 items-center ${isVisible ? 
+            // 'animate-text-appear' おかしくなるためコメントアウト
+            'opacity-100' : 'opacity-0'}`}>
             <div className="space-y-6">
               <p className="text-white/80 text-lg leading-relaxed">
                 屋外・屋内対応専用ハードウェアによるアプリ対応のLEDビジョンサービスです。

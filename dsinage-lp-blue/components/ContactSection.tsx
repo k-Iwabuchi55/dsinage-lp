@@ -179,8 +179,8 @@ export default function ContactSection() {
 
           <div className="mt-12 text-center">
             <p className="text-white/60 mb-4">お電話でのお問い合わせ</p>
-            <p className="text-2xl font-bold gradient-text mb-2">03-1234-5678</p>
-            <p className="text-white/60 text-sm">受付時間：平日 9:00〜18:00</p>
+            <p className="text-2xl font-bold gradient-text mb-2">03-5843-3773</p>
+            <p className="text-white/60 text-sm">受付時間：平日 10:00〜19:00</p>
           </div>
         </div>
       </div>
