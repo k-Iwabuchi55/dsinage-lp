@@ -253,7 +253,7 @@ export default function PricingPlans() {
               className={`px-8 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
                 planType === 'rental'
                   ? showDSystemPlans
-                    ? 'bg-gradient-to-r from-[#D9AE0A] to-[#FFD700] text-white shadow-lg'
+                    ? 'bg-gradient-blue text-white shadow-lg'
                     : 'bg-gradient-blue text-white shadow-lg'
                   : 'text-white/60 hover:text-white'
               }`}
@@ -265,7 +265,7 @@ export default function PricingPlans() {
               className={`px-8 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
                 planType === 'purchase'
                   ? showDSystemPlans
-                    ? 'bg-gradient-to-r from-[#D9AE0A] to-[#FFD700] text-white shadow-lg'
+                    ? 'bg-gradient-blue text-white shadow-lg'
                     : 'bg-gradient-blue text-white shadow-lg'
                   : 'text-white/60 hover:text-white'
               }`}
@@ -283,7 +283,7 @@ export default function PricingPlans() {
                 onClick={() => setShowDSystemPlans(true)}
                 className="group relative inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold text-[#FFD700] border border-white/20 hover:border-white/40 shadow-lg shadow-[#063761]/30 hover:shadow-lg hover:shadow-[#FFD700]/20 transform hover:-translate-y-0.5 transition-all duration-300 overflow-hidden"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-[#1D262E] via-[#063761] to-[#1D262E] bg-[length:200%_100%] animate-wave" />
+                <div className="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-primary to-brand-dark bg-[length:200%_100%] animate-wave" />
                 <div className="absolute inset-0 bg-gradient-radial from-[#FFD700]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <span className="relative z-10 text-lg">D-systemご利用の方はこちら</span>
                 <svg className="relative z-10 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -294,15 +294,16 @@ export default function PricingPlans() {
             </>
           ) : (
             <>
-              <p className="text-2xl font-bold mb-4">D-systemご利用の方<p className='text-[#FFD700] '><span className='text-7xl'>100台</span> 限定</p></p>
+              <p className="text-2xl font-bold mb-4">D-systemご利用の方<p className='text-[#FFD700]  mt-6'><span className='text-7xl'>100台</span> 限定</p></p>
               <button
                 onClick={() => setShowDSystemPlans(false)}
-                className="inline-flex items-center justify-center w-10 h-10 text-white/80 hover:text-white border border-white/20 hover:border-white/40 rounded-full transition-all duration-300"
+                className="inline-flex items-center justify-center w-20 h-10 text-white/80 hover:text-white border border-white/20 hover:border-white/40 rounded-full transition-all duration-300"
                 aria-label="通常プランに戻る"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 17l-5-5m0 0l5-5m-5 5h12" />
                 </svg>
+                戻る
               </button>
             </>
           )}
@@ -312,15 +313,13 @@ export default function PricingPlans() {
         <div className={`fixed top-16 left-0 right-0 z-40 text-center duration-300 ${
           isSticky ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'
         }`}>
-          <div className={`inline-flex bg-brand-dark/90 backdrop-blur-lg rounded-full p-1 ${
-            showDSystemPlans ? 'border border-[#D9AE0A]/30' : 'border border-brand-light-blue/30'
-          } shadow-lg`}>
+          <div className="inline-flex bg-brand-dark/90 backdrop-blur-lg rounded-full p-1 border border-brand-light-blue/30 shadow-lg">
             <button
               onClick={() => setPlanType('rental')}
               className={`px-8 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
                 planType === 'rental'
                   ? showDSystemPlans
-                    ? 'bg-gradient-to-r from-[#D9AE0A] to-[#FFD700] text-white shadow-lg'
+                    ? 'bg-gradient-blue text-white shadow-lg'
                     : 'bg-gradient-blue text-white shadow-lg'
                   : 'text-white/60 hover:text-white'
               }`}
@@ -332,7 +331,7 @@ export default function PricingPlans() {
               className={`px-8 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
                 planType === 'purchase'
                   ? showDSystemPlans
-                    ? 'bg-gradient-to-r from-[#D9AE0A] to-[#FFD700] text-white shadow-lg'
+                    ? 'bg-gradient-blue text-white shadow-lg'
                     : 'bg-gradient-blue text-white shadow-lg'
                   : 'text-white/60 hover:text-white'
               }`}
@@ -361,14 +360,14 @@ export default function PricingPlans() {
                 )}
                 {plan.recommended && showDSystemPlans && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-[#D9AE0A] to-[#FFD700] text-white px-6 py-2 rounded-full text-sm font-bold tracking-wider">
+                    <span className="bg-gradient-blue text-white px-6 py-2 rounded-full text-sm font-bold tracking-wider">
                       〜おすすめ〜
                     </span>
                   </div>
                 )}
                 
                 <div className="mb-6">
-                  <p className={`${showDSystemPlans ? 'text-yellow-500/60' : 'text-brand-light-blue/60'} text-sm tracking-widest mb-2`}>{plan.subtitle}</p>
+                  <p className="text-brand-light-blue/60 text-sm tracking-widest mb-2">{plan.subtitle}</p>
                   <h3 className="text-2xl font-bold text-white mb-3">{plan.name}</h3>
                 </div>
                 
@@ -377,17 +376,17 @@ export default function PricingPlans() {
                     <p className="text-white/60 text-sm mb-1">初期費用</p>
                     {showDSystemPlans ? (
                       <div className="flex items-center gap-2 md:gap-3">
-                        <p className="text-xl text-white/40 line-through decoration-red-500">
+                        <p className="text-xl text-white/40 line-through decoration-[#ff555a]">
                           {index === 0 ? '400,000円' : '500,000円'}
                         </p>
-                        <svg className="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-5 h-5 text-brand-light-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                         </svg>
                         <div className="flex flex-col">
-                          <p className="text-2xl font-bold text-yellow-500">
+                          <p className="text-2xl font-bold gradient-text">
                             {plan.initialCost}
                           </p>
-                          <span className="text-xl text-red-500 whitespace-nowrap">
+                          <span className="text-xl text-[#ff555a] whitespace-nowrap">
                             <span>(</span>
                               {index === 0 ? '-50,000' : '-100,000'}
                               <span className="text-sm">円</span>
@@ -404,17 +403,17 @@ export default function PricingPlans() {
                     <p className="text-white/60 text-sm mb-1">月額</p>
                     {showDSystemPlans ? (
                       <div className="flex items-center gap-2 md:gap-3">
-                        <p className="text-xl text-white/40 line-through decoration-red-500">
+                        <p className="text-xl text-white/40 line-through decoration-[#ff555a]">
                           {index === 0 ? '20,000円' : '35,000円'}
                         </p>
-                        <svg className="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-5 h-5 text-brand-light-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                         </svg>
                         <div className="flex flex-col">
-                          <p className="text-2xl font-bold text-yellow-500">
+                          <p className="text-2xl font-bold gradient-text">
                             {plan.monthlyCost}
                           </p>
-                          <span className="text-xl text-red-500 whitespace-nowrap">
+                          <span className="text-xl text-[#ff555a] whitespace-nowrap">
                             <span>(</span>
                               {index === 0 ? '-5,000' : '-10,000'}
                               <span className="text-sm">円</span>
@@ -432,11 +431,11 @@ export default function PricingPlans() {
                 </div>
 
                 <div className="mb-6">
-                  <p className={`${showDSystemPlans ? 'text-yellow-500' : 'text-brand-light-blue'} font-semibold mb-4`}>主な機能</p>
+                  <p className="text-brand-light-blue font-semibold mb-4">主な機能</p>
                   <ul className="space-y-3">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start text-white/80 text-sm">
-                        <svg className={`w-5 h-5 ${showDSystemPlans ? 'text-yellow-500' : 'text-brand-light-blue'} mr-3 mt-0.5 flex-shrink-0`} fill="currentColor" viewBox="0 0 20 20">
+                        <svg className="w-5 h-5 text-brand-light-blue mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
                         <span>{feature}</span>
@@ -446,7 +445,7 @@ export default function PricingPlans() {
                 </div>
 
                 <div className="mb-8 p-4 bg-brand-light-blue/5 rounded-lg">
-                  <p className={`${showDSystemPlans ? 'text-yellow-500' : 'text-brand-light-blue'} font-semibold mb-3 text-sm`}>※注</p>
+                  <p className="text-brand-light-blue font-semibold mb-3 text-sm">※注</p>
                   <ul className="space-y-2">
                     {plan.notes.map((note, idx) => (
                       <li key={idx} className="text-white/60 text-xs leading-relaxed">
@@ -462,7 +461,7 @@ export default function PricingPlans() {
                   href="#contact" 
                   className={`w-full py-3 rounded-full font-semibold tracking-wider transition-all inline-block text-center ${
                     showDSystemPlans
-                      ? 'bg-gradient-to-r from-yellow-500 to-yellow-600 text-white hover-glow'
+                      ? 'bg-gradient-blue text-white hover-glow'
                       : plan.recommended 
                         ? 'bg-gradient-blue text-white hover-glow' 
                         : 'bg-transparent border border-brand-light-blue/30 text-brand-light-blue hover:border-brand-light-blue/60'
@@ -494,21 +493,21 @@ export default function PricingPlans() {
                 )}
                 {plan.recommended && showDSystemPlans && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-[#D9AE0A] to-[#FFD700] text-white px-6 py-2 rounded-full text-sm font-bold tracking-wider">
+                    <span className="bg-gradient-blue text-white px-6 py-2 rounded-full text-sm font-bold tracking-wider">
                       〜おすすめ〜
                     </span>
                   </div>
                 )}
                 
                 <div className="mb-6">
-                  <p className={`${showDSystemPlans ? 'text-yellow-500/60' : 'text-brand-light-blue/60'} text-sm tracking-widest mb-2`}>{plan.subtitle}</p>
+                  <p className="text-brand-light-blue/60 text-sm tracking-widest mb-2">{plan.subtitle}</p>
                   <h3 className="text-2xl font-bold text-white mb-3">{plan.name}</h3>
                 </div>
                 
                 <div className="mb-6 pb-6 border-b border-brand-light-blue/20">
                   <div className="mb-4">
                     <p className="text-white/60 text-sm mb-1">購入費用</p>
-                    <p className={`text-2xl font-bold ${showDSystemPlans ? 'text-yellow-500' : 'gradient-text'}`}>{plan.purchaseCost}</p>
+                    <p className="text-2xl font-bold gradient-text">{plan.purchaseCost}</p>
                     <p className="text-white/50 text-xs mt-1">{plan.additionalCost}</p>
                   </div>
                   {plan.cloudCost && (
@@ -517,17 +516,17 @@ export default function PricingPlans() {
                       {showDSystemPlans ? (
                         <div>
                           <div className="flex items-center gap-2 md:gap-3">
-                            <p className="text-xl text-white/40 line-through decoration-red-500">
+                            <p className="text-xl text-white/40 line-through decoration-[#ff555a]">
                               15,000円
                             </p>
-                            <svg className="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-5 h-5 text-brand-light-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                             </svg>
                             <div>
-                              <p className="text-2xl font-bold text-yellow-500">
+                              <p className="text-2xl font-bold gradient-text">
                                 {plan.cloudCost}
                               </p>
-                              <span className="text-xl text-red-500 whitespace-nowrap">
+                              <span className="text-xl text-[#ff555a] whitespace-nowrap">
                                 <span>(</span>
                                 -5,000
                                 <span className="text-sm">円</span>
@@ -552,17 +551,17 @@ export default function PricingPlans() {
                     {showDSystemPlans ? (
                       <div>
                         <div className="flex items-center gap-2 md:gap-3">
-                          <p className="text-xl text-white/40 line-through decoration-red-500">
+                          <p className="text-xl text-white/40 line-through decoration-[#ff555a]">
                             5,000円
                           </p>
-                          <svg className="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-5 h-5 text-brand-light-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                           </svg>
                           <div>
-                            <p className="text-2xl font-bold text-yellow-500">
+                            <p className="text-2xl font-bold gradient-text">
                               {plan.insuranceCost}
                             </p>
-                            <span className="text-xl text-red-500 whitespace-nowrap">
+                            <span className="text-xl text-[#ff555a] whitespace-nowrap">
                               <span>(</span>
                               -2000
                               <span className="text-sm">円</span>
@@ -584,11 +583,11 @@ export default function PricingPlans() {
                 </div>
 
                 <div className="mb-6">
-                  <p className={`${showDSystemPlans ? 'text-yellow-500' : 'text-brand-light-blue'} font-semibold mb-4`}>主な機能</p>
+                  <p className="text-brand-light-blue font-semibold mb-4">主な機能</p>
                   <ul className="space-y-3">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start text-white/80 text-sm">
-                        <svg className={`w-5 h-5 ${showDSystemPlans ? 'text-yellow-500' : 'text-brand-light-blue'} mr-3 mt-0.5 flex-shrink-0`} fill="currentColor" viewBox="0 0 20 20">
+                        <svg className="w-5 h-5 text-brand-light-blue mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
                         <span>{feature}</span>
@@ -598,7 +597,7 @@ export default function PricingPlans() {
                 </div>
 
                 <div className="mb-8 p-4 bg-brand-light-blue/5 rounded-lg">
-                  <p className={`${showDSystemPlans ? 'text-yellow-500' : 'text-brand-light-blue'} font-semibold mb-3 text-sm`}>※注</p>
+                  <p className="text-brand-light-blue font-semibold mb-3 text-sm">※注</p>
                   <ul className="space-y-2">
                     {plan.notes.map((note, idx) => (
                       <li key={idx} className="text-white/60 text-xs leading-relaxed">
@@ -614,7 +613,7 @@ export default function PricingPlans() {
                   href="#contact" 
                   className={`w-full py-3 rounded-full font-semibold tracking-wider transition-all inline-block text-center ${
                     showDSystemPlans
-                      ? 'bg-gradient-to-r from-yellow-500 to-yellow-600 text-white hover-glow'
+                      ? 'bg-gradient-blue text-white hover-glow'
                       : plan.recommended 
                         ? 'bg-gradient-blue text-white hover-glow' 
                         : 'bg-transparent border border-brand-light-blue/30 text-brand-light-blue hover:border-brand-light-blue/60'
