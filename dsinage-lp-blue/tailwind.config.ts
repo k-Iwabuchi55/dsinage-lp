@@ -40,7 +40,7 @@ const config: Config = {
         fadeIn: "fadeInUp 0.5s ease-out",
         // NEW: 3回転して奥に移動するアニメーション (元に戻す場合はこの行を削除)
         "spin-and-shrink": "spinAndShrink 4s ease-in-out forwards",
-        "text-appear": "textAppear 1.5s ease-out 3s forwards",
+        // "text-appear": "textAppear 1.5s ease-out 3s forwards", // JavaScriptで制御するため不要
         wave: "wave 3s ease-in-out infinite",
       },
       keyframes: {

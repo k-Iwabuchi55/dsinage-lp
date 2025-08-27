@@ -38,14 +38,17 @@ export default function PricingPlans() {
       contractNote: '最低2年の縛りあり、保守含む',
       features: [
         'スマホアプリで簡単操作',
-        '故障時のパネル交換対応(当社規定に準ずる)',
-        '屋外でも安心',
+        '屋外でも安心の防水仕様',
         '回線工事等不要',
+      ],
+      supports: [
+        '故障時のパネル交換対応(当社規定に準ずる)',
+        '映像、画像などのコンテンツ制作(別途お見積り)',
       ],
       notes: [
         '機器の配送代は本州地域の運搬について初期費用に含まれます。北海道、沖縄地域への配送は別途費用がかかりますのでご了承ください。',
         '故障によるLEDパネルの交換は当社規定に準ずる形での交換になります。',
-        '映し出せる画像、動画の容量は12Mまでとなります。',
+        '映し出せる画像、動画の容量は500MBまでとなります。',
         '本製品は高精細LEDを使用しており、高輝度による視認性を重視しております。液晶を使用したモデルとは違い、近距離ではドット感があります。'
       ],
       recommended: false,
@@ -63,14 +66,17 @@ export default function PricingPlans() {
         'WEBアプリで簡単操作',
         '全店舗の一括コンテンツ管理',
         '店舗別・時間別の配信設定',
-        '故障時のパネル交換対応(当社規定に準ずる)',
-        '屋外でも安心',
+        '屋外でも安心の防水仕様',
         '回線工事等不要',
+      ],
+      supports: [
+        '故障時のパネル交換対応(当社規定に準ずる)',
+        '映像、画像などのコンテンツ制作(別途お見積り)',
       ],
       notes: [
         '機器の配送代は本州地域の運搬について初期費用に含まれます。北海道、沖縄地域への配送は別途費用がかかりますのでご了承ください。',
         '故障によるLEDパネルの交換は当社規定に準ずる形での交換になります。',
-        '映し出せる画像、動画の容量は12Mまでとなります。',
+        '映し出せる画像、動画の容量は500MBまでとなります。',
         '本製品は高精細LEDを使用しており、高輝度による視認性を重視しております。液晶を使用したモデルとは違い、近距離ではドット感があります。'
       ],
       recommended: true,
@@ -90,14 +96,18 @@ export default function PricingPlans() {
       contractNote: '最低2年の縛りあり、保守含む',
       features: [
         'スマホアプリで簡単操作',
-        '故障時のパネル交換対応(当社規定に準ずる)',
-        '屋外でも安心',
+        '屋外でも安心の防水仕様',
         '回線工事等不要',
+      ],
+      supports: [
+        '故障時のパネル交換対応(当社規定に準ずる)',
+        '映像、画像などのコンテンツ制作(別途お見積り)',
+
       ],
       notes: [
         '機器の配送代は本州地域の運搬について初期費用に含まれます。北海道、沖縄地域への配送は別途費用がかかりますのでご了承ください。',
         '故障によるLEDパネルの交換は当社規定に準ずる形での交換になります。',
-        '映し出せる画像、動画の容量は12Mまでとなります。',
+        '映し出せる画像、動画の容量は500MBまでとなります。',
         '本製品は高精細LEDを使用しており、高輝度による視認性を重視しております。液晶を使用したモデルとは違い、近距離ではドット感があります。'
       ],
       recommended: false
@@ -114,14 +124,18 @@ export default function PricingPlans() {
         'WEBアプリで簡単操作',
         '全店舗の一括コンテンツ管理',
         '店舗別・時間別の配信設定',
-        '故障時のパネル交換対応(当社規定に準ずる)',
-        '屋外でも安心',
+        '屋外でも安心の防水仕様',
         '回線工事等不要',
+      ],
+      supports: [
+        '故障時のパネル交換対応(当社規定に準ずる)',
+        '映像、画像などのコンテンツ制作(別途お見積り)',
+
       ],
       notes: [
         '機器の配送代は本州地域の運搬について初期費用に含まれます。北海道、沖縄地域への配送は別途費用がかかりますのでご了承ください。',
         '故障によるLEDパネルの交換は当社規定に準ずる形での交換になります。',
-        '映し出せる画像、動画の容量は12Mまでとなります。',
+        '映し出せる画像、動画の容量は500MBまでとなります。',
         '本製品は高精細LEDを使用しており、高輝度による視認性を重視しております。液晶を使用したモデルとは違い、近距離ではドット感があります。'
       ],
       recommended: true
@@ -139,14 +153,18 @@ export default function PricingPlans() {
       insuranceNote: '(税込)/月(LEDパネル故障時に対応)',
       features: [
         'スマホアプリで簡単操作',
-        '故障時のパネル交換対応(当社規定に準ずる)',
-        '屋外でも安心',
+        '屋外でも安心の防水仕様',
         '回線工事等不要',
+      ],
+      supports: [
+        '故障時のパネル交換対応(当社規定に準ずる)',
+        '映像、画像などのコンテンツ制作(別途お見積り)',
+
       ],
       notes: [
         '機器の配送代が別途かかります。',
         '故障によるLEDパネルの交換には別途費用がかかります。',
-        '映し出せる画像、動画の容量は12Mまでとなります。',
+        '映し出せる画像、動画の容量は500MBまでとなります。',
         '本製品は高精細LEDを使用しており、高輝度による視認性を重視しております。液晶を使用したモデルとは違い、近距離ではドット感があります。'
       ],
       recommended: false,
@@ -165,14 +183,18 @@ export default function PricingPlans() {
         'WEBアプリで簡単操作',
         '全店舗の一括コンテンツ管理',
         '店舗別・時間別の配信設定',
-        '故障時のパネル交換対応(当社規定に準ずる)',
-        '屋外でも安心',
+        '屋外でも安心の防水仕様',
         '回線工事等不要',
+      ],
+      supports: [
+        '故障時のパネル交換対応(当社規定に準ずる)',
+        '映像、画像などのコンテンツ制作(別途お見積り)',
+
       ],
       notes: [
         '機器の配送代が別途かかります。',
         '故障によるLEDパネルの交換には別途費用がかかります。',
-        '映し出せる画像、動画の容量は12Mまでとなります。',
+        '映し出せる画像、動画の容量は500MBまでとなります。',
         '本製品は高精細LEDを使用しており、高輝度による視認性を重視しております。液晶を使用したモデルとは違い、近距離ではドット感があります。'
       ],
       recommended: true,
@@ -191,14 +213,18 @@ export default function PricingPlans() {
       insuranceNote: '(税込)/月(LEDパネル故障時に対応)',
       features: [
         'スマホアプリで簡単操作',
-        '故障時のパネル交換対応(当社規定に準ずる)',
-        '屋外でも安心',
+        '屋外でも安心の防水仕様',
         '回線工事等不要',
+      ],
+      supports: [
+        '故障時のパネル交換対応(当社規定に準ずる)',
+        '映像、画像などのコンテンツ制作(別途お見積り)',
+
       ],
       notes: [
         '機器の配送代が別途かかります。',
         '故障によるLEDパネルの交換には別途費用がかかります。',
-        '映し出せる画像、動画の容量は12Mまでとなります。',
+        '映し出せる画像、動画の容量は500MBまでとなります。',
         '本製品は高精細LEDを使用しており、高輝度による視認性を重視しております。液晶を使用したモデルとは違い、近距離ではドット感があります。'
       ],
       recommended: false
@@ -216,14 +242,18 @@ export default function PricingPlans() {
         'WEBアプリで簡単操作',
         '全店舗の一括コンテンツ管理',
         '店舗別・時間別の配信設定',
-        '故障時のパネル交換対応(当社規定に準ずる)',
-        '屋外でも安心',
+        '屋外でも安心の防水仕様',
         '回線工事等不要',
+      ],
+      supports: [
+        '故障時のパネル交換対応(当社規定に準ずる)',
+        '映像、画像などのコンテンツ制作(別途お見積り)',
+
       ],
       notes: [
         '機器の配送代が別途かかります。',
         '故障によるLEDパネルの交換には別途費用がかかります。',
-        '映し出せる画像、動画の容量は12Mまでとなります。',
+        '映し出せる画像、動画の容量は500MBまでとなります。',
         '本製品は高精細LEDを使用しており、高輝度による視認性を重視しております。液晶を使用したモデルとは違い、近距離ではドット感があります。'
       ],
       recommended: true
@@ -444,6 +474,20 @@ export default function PricingPlans() {
                   </ul>
                 </div>
 
+                <div className="mb-6">
+                  <p className="text-brand-light-blue font-semibold mb-4">サポート内容</p>
+                  <ul className="space-y-3">
+                    {plan.supports.map((feature, idx) => (
+                      <li key={idx} className="flex items-start text-white/80 text-sm">
+                        <svg className="w-5 h-5 text-brand-light-blue mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
                 <div className="mb-8 p-4 bg-brand-light-blue/5 rounded-lg">
                   <p className="text-brand-light-blue font-semibold mb-3 text-sm">※注</p>
                   <ul className="space-y-2">
@@ -586,6 +630,20 @@ export default function PricingPlans() {
                   <p className="text-brand-light-blue font-semibold mb-4">主な機能</p>
                   <ul className="space-y-3">
                     {plan.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start text-white/80 text-sm">
+                        <svg className="w-5 h-5 text-brand-light-blue mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mb-6">
+                  <p className="text-brand-light-blue font-semibold mb-4">サポート内容</p>
+                  <ul className="space-y-3">
+                    {plan.supports.map((feature, idx) => (
                       <li key={idx} className="flex items-start text-white/80 text-sm">
                         <svg className="w-5 h-5 text-brand-light-blue mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
