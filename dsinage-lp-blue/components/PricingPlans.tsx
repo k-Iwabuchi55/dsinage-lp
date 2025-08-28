@@ -58,7 +58,7 @@ export default function PricingPlans() {
       name: 'エンタープライズプラン',
       subtitle: 'Enterprise - Limited',
       initialCost: '400,000円',
-      monthlyCost: '20,000円',
+      monthlyCost: '25,000円',
       period: '(税込)/月',
       description: 'レンタル機器、運送費用含む',
       contractNote: '最低2年の縛りあり、保守含む',
