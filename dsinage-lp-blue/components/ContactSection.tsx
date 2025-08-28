@@ -11,6 +11,8 @@ export default function ContactSection() {
     phone: '',
     message: ''
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -19,10 +21,42 @@ export default function ContactSection() {
     })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    alert('お問い合わせありがとうございます。担当者より連絡させていただきます。')
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setSubmitStatus('success')
+        // フォームをリセット
+        setFormData({
+          company: '',
+          name: '',
+          area: '',
+          email: '',
+          phone: '',
+          message: ''
+        })
+        // 5秒後にメッセージを消す
+        setTimeout(() => setSubmitStatus('idle'), 5000)
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      console.error('送信エラー:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -40,7 +74,7 @@ export default function ContactSection() {
           <form onSubmit={handleSubmit} className="glass-effect rounded-2xl p-8">
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div>
-                <label htmlFor="company" className="block text-white/80 mb-2">会社名</label>
+                <label htmlFor="company" className="block text-white/80 mb-2">会社・店舗名</label>
                 <input
                   type="text"
                   id="company"
@@ -52,7 +86,7 @@ export default function ContactSection() {
                 />
               </div>
               <div>
-                <label htmlFor="name" className="block text-white/80 mb-2">お名前 *</label>
+                <label htmlFor="name" className="block text-white/80 mb-2">お名前 <span className="text-red-400 text-sm">※必須</span></label>
                 <input
                   type="text"
                   id="name"
@@ -68,7 +102,7 @@ export default function ContactSection() {
 
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div>
-                <label htmlFor="area" className="block text-white/80 mb-2">エリア（都道府県） *</label>
+                <label htmlFor="area" className="block text-white/80 mb-2">エリア（都道府県） <span className="text-red-400 text-sm">※必須</span></label>
                 <select
                   id="area"
                   name="area"
@@ -128,13 +162,14 @@ export default function ContactSection() {
                 </select>
               </div>
               <div>
-                <label htmlFor="phone" className="block text-white/80 mb-2">電話番号</label>
+                <label htmlFor="phone" className="block text-white/80 mb-2">電話番号 <span className="text-red-400 text-sm">※必須</span></label>
                 <input
                   type="tel"
                   id="phone"
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
+                  required
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400 transition"
                   placeholder="03-1234-5678"
                 />
@@ -142,7 +177,7 @@ export default function ContactSection() {
             </div>
 
             <div className="mb-6">
-              <label htmlFor="email" className="block text-white/80 mb-2">メールアドレス *</label>
+              <label htmlFor="email" className="block text-white/80 mb-2">メールアドレス <span className="text-red-400 text-sm">※必須</span></label>
               <input
                 type="email"
                 id="email"
@@ -156,7 +191,7 @@ export default function ContactSection() {
             </div>
 
             <div className="mb-6">
-              <label htmlFor="message" className="block text-white/80 mb-2">お問い合わせ内容 *</label>
+              <label htmlFor="message" className="block text-white/80 mb-2">お問い合わせ内容 <span className="text-red-400 text-sm">※必須</span></label>
               <textarea
                 id="message"
                 name="message"
@@ -171,10 +206,35 @@ export default function ContactSection() {
 
             <button
               type="submit"
-              className="w-full bg-gradient-blue text-white py-4 rounded-full font-semibold hover-glow transition"
+              disabled={isSubmitting}
+              className={`w-full bg-gradient-blue text-white py-4 rounded-full font-semibold hover-glow transition ${
+                isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
+              }`}
             >
-              送信する
+              {isSubmitting ? '送信中...' : '送信する'}
             </button>
+
+            {/* 送信結果メッセージ */}
+            {submitStatus === 'success' && (
+              <div className="mt-4 p-4 bg-green-500/20 border border-green-500/50 rounded-lg">
+                <p className="text-green-400 text-center font-semibold">
+                  お問い合わせありがとうございます
+                </p>
+                <p className="text-green-300 text-center text-sm mt-1">
+                  担当者より2営業日以内にご連絡させていただきます
+                </p>
+              </div>
+            )}
+            {submitStatus === 'error' && (
+              <div className="mt-4 p-4 bg-red-500/20 border border-red-500/50 rounded-lg">
+                <p className="text-red-400 text-center font-semibold">
+                  送信に失敗しました
+                </p>
+                <p className="text-red-300 text-center text-sm mt-1">
+                  お手数ですが、しばらく経ってから再度お試しください
+                </p>
+              </div>
+            )}
           </form>
 
           <div className="mt-12 text-center">
